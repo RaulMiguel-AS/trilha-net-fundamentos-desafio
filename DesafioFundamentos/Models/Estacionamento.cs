@@ -41,7 +41,8 @@ namespace DesafioFundamentos.Models
                 }
             }
 
-            // veiculos.Any(x => x.ToUpper() == placa.ToUpper())
+            // veiculos.Any(x => x.ToUpper() == placa.ToUpper()) mudei pq não tinha entendido isso mas depois dei uma olhada e
+            //entendi
 
             if (verificarVeiculo)
             {
@@ -55,6 +56,7 @@ namespace DesafioFundamentos.Models
                 decimal valorTotal = precoInicial + precoPorHora*horas; 
 
                 // TODO: Remover a placa digitada da lista de veículos
+                veiculos.Remove(placa);
                 // *IMPLEMENTE AQUI*
 
                 Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
